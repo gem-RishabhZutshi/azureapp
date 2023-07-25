@@ -17,11 +17,13 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           allow-no-subscriptions: true
           
-  
-      - name: Azure CLI script
-        uses: azure/CLI@v1
+      - name: Build and deploy Container App
+        uses: azure/container-apps-deploy-action@v1
         with:
-          azcliversion: latest
-          inlineScript: |
-            az account show
-            az group list
+          appSourcePath: ${{ github.workspace }}
+          acrName: discerndevregistry
+          acrUsername: ${{ secrets.REGISTRY_USERNAME }}
+          acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
+          containerAppEnvironment: my-discern-container-app-env
+          containerAppName: discern-webservice-dev
+          resourceGroup: Discern-Dev-Resource-Group
