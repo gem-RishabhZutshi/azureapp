@@ -18,6 +18,5 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}
-          acrName: discerndevregistry
-          containerAppName: discern-webservice-dev
+          acrName: webservicedevregistry
           resourceGroup: Discern-Dev-Resource-Group
