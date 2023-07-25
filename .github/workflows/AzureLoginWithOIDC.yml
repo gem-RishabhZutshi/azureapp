@@ -27,3 +27,6 @@ jobs:
           containerAppEnvironment: my-discern-container-app-env
           containerAppName: discern-webservice-dev
           resourceGroup: Discern-Dev-Resource-Group
+          
+          
+          
