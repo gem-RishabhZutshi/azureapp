@@ -24,6 +24,7 @@ jobs:
 #           acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
     #      containerAppEnvironment: my-discern-container-app-env
           resourceGroup: Discern-Dev-Resource-Group
+          dockerfilePath: ./Dockerfile
           
           
           
