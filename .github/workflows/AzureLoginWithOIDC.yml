@@ -19,7 +19,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ${{ github.workspace }}
-          acrName: discerndevregistry
+          acrName: webservicedevregistry
 #           acrUsername: ${{ secrets.REGISTRY_USERNAME }}
 #           acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
           containerAppEnvironment: my-discern-container-app-env
